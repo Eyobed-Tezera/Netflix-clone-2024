@@ -1,7 +1,7 @@
-.header-outlet-container {
+.header_outlet_container {
     position: sticky;
-    display: flex;
     top: 0;/*to stick on top */
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(20, 20, 20);
@@ -18,13 +18,13 @@
     background-color: rgb(20, 20, 20);
 } */
 
-.header-container {
+.header_container {
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header-left ul{
+.header_left ul{
     width: 140%;
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,7 @@
 
 
 
-.header-right ul{
+.header_right ul{
     width: 150%;
     display: flex;
     justify-content: space-around;
