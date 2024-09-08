@@ -1,32 +1,30 @@
-.header_outlet_container {
+.header-outlet-container {
     position: sticky;
-    top: 0;/*to stick on top */
     display: flex;
+    top: 0;/*to stick on top */
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(148, 132, 132);  */
-    background-color: transparent;
     background-color: rgb(20, 20, 20);
+    background-color: transparent;
     height: 10vh;/*view hight"makes more flexable" */
     color: white;
 
     transition: all 0.5s;/* smoothly animate changes*/
     transition-timing-function: ease-in;/* controls how the transition progresses over time*/
     z-index: 1;
-    /* background-color: red; */
 }
 
-/* .nav_black {
+/* .nav-black {
     background-color: rgb(20, 20, 20);
 } */
 
-.header_container {
+.header-container {
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header_left ul{
+.header-left ul{
     width: 140%;
     display: flex;
     justify-content: space-between;
@@ -38,7 +36,7 @@
 
 
 
-.header_right ul{
+.header-right ul{
     width: 150%;
     display: flex;
     justify-content: space-around;
