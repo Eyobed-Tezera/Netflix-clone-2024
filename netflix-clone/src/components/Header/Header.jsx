@@ -5,6 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { image2 } from "../../utils/image";
 function Header() {
   return (
     <div>
@@ -28,11 +29,12 @@ function Header() {
               <li>
                 <SearchIcon />
               </li>
+              <li style={{marginTop:2}}>Kids</li>
               <li>
                 <NotificationsNoneIcon />
               </li>
               <li>
-                <AccountBoxIcon />
+                <img  style={{ paddingBottom:4}}src={image2} alt="profile" />{" "}
               </li>
               <li>
                 <ArrowDropDownIcon />

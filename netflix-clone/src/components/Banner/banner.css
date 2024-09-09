@@ -4,7 +4,7 @@
   padding-bottom: 0.3rem;
 }
 .banner_contents {
-  padding-top: 300px;
+  padding-top: 231px;
   margin-left: 30px;
 }
 .banner_description {
@@ -17,10 +17,11 @@
 }
 .banner_button {
   color: white;
+  margin-top: 10px;
   cursor: pointer;
   outline: none;
   border: none;
-  padding: 1rem 2.5rem; /* Reduced right padding for better alignment */
+  padding: 13px 34px; 
   border-radius: 0.2vw;
   margin-right: 2rem;
   background-color: rgba(51, 51, 51, 0.5);

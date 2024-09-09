@@ -10,4 +10,5 @@ export const StyledBanner = styled.div`
   margin-bottom: -80px;
   margin-top: -10vh;
   object-fit: contain;
+  
 `;

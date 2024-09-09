@@ -35,7 +35,7 @@
 }
 .service_code {
   border: #fff 1px solid;
-  width: 12%;
+  width: 14%;
   margin: 10px 0;
   cursor: pointer;
 }
@@ -43,7 +43,7 @@
  display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3px 3px;
+  margin: 2px 2px;
 }
 .copy-write {
   font-size: 12px;
