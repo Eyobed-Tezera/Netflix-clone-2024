@@ -4,6 +4,8 @@ import instanceAxiose from "../../utils/axios";
 import requests from "../../utils/requests";
 import { StyledBanner } from "../../utils/banner.style";
 import { truncate } from "../../utils/truncate";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import { image } from "../../utils/image";
 function Banner() {
   const [movie, setMovie] = useState();
   useEffect(() => {
@@ -30,10 +32,25 @@ function Banner() {
 
         <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
         <div className="banner_buttons">
-          <button className="banner_button playColor">Play</button>
-          <button className="banner_button">More Info</button>
+          <button className="banner_button playColor">
+            <PlayArrowIcon
+              style={{
+                color: "black",
+                marginRight: "8px",
+                verticalAlign: "middle",
+              }}
+            />
+            Play
+          </button>
+          <button className="banner_button ">
+            <img
+              src={image}
+              alt=""
+              style={{  height: "20px", marginRight: "8px" }}
+            />
+            <p>More Info</p>
+          </button>
         </div>
-
       </div>
       <div className="banner_fadeBottom" />
     </StyledBanner>

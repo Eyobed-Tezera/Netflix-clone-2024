@@ -4,6 +4,7 @@ const requests = {
   fetchHistory: `/discover/movie?api_key=${API_KEY}&with_genres=36`,
   fetchWarMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10752`,
   fetchSicenceFiction: `/discover/movie?api_key=${API_KEY}&with_genres=878`,
+  fetchUpcoming: `movie/upcoming?api_key=${API_KEY}language=en-US`,
   fetchPopular: `/movie/popular?api_key=${API_KEY}language=en-US`,
   fetchTopRated: `/movie/top_rated?api_key=${API_KEY}language=en-US`,
   fetchTranding: `/trending/all/day?api_key=${API_KEY}language=en-US`,
