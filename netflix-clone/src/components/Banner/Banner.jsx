@@ -28,7 +28,9 @@ function Banner() {
   return (
     <StyledBanner $backdropPath={movie?.backdrop_path}>
       <div className="banner_contents">
-        <h1 className="banner_name">{movie?.name || movie?.original_name}</h1>
+        <h1 className="banner_name">
+          {movie?.name || movie?.original_name || movie?.title}
+        </h1>
 
         <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
         <div className="banner_buttons">
@@ -46,7 +48,7 @@ function Banner() {
             <img
               src={image}
               alt=""
-              style={{  height: "20px", marginRight: "8px" }}
+              style={{ height: "20px", marginRight: "8px" }}
             />
             <p>More Info</p>
           </button>
