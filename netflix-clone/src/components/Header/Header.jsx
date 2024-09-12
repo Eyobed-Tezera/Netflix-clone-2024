@@ -8,7 +8,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { image2 } from "../../utils/image";
 function Header() {
   return (
-    <div>
+
       <div className="header_outlet_container">
         <div className="header_container">
           <div className="header_left">
@@ -43,7 +43,6 @@ function Header() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

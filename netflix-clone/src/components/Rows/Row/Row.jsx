@@ -5,7 +5,7 @@ import movieTrailer from "movie-trailer";
 import YouTube from "react-youtube";
 const baseUrl = "https://image.tmdb.org/t/p/original";
 
-function Row({ title, fetchUrl, LargeRow, customClass }) {
+function Row({ title, fetchUrl, LargeRow, logicalTrailer, setLogicalTrailer }) {
   const [movies, setMovie] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
 
@@ -19,51 +19,52 @@ function Row({ title, fetchUrl, LargeRow, customClass }) {
       }
     })();
   }, [fetchUrl]);
-
-  const handelClick = (movie) => {
+  console.log(trailerUrl);
+  // console.log(logicalTrailer);
+  const handleClick = (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");
+      setLogicalTrailer("");
     } else {
       movieTrailer(movie?.title || movie?.name || movie?.original_name).then(
         (url) => {
-          console.log(url);
           const urlParams = new URLSearchParams(new URL(url).search);
-          console.log(urlParams);
-          console.log(urlParams.get("v"));
           setTrailerUrl(urlParams.get("v"));
+          setLogicalTrailer(title);
         }
       );
     }
   };
+
   const options = {
-    hight: "390",
+    height: "390",
     width: "100%",
     playerVars: {
       autoplay: 1,
     },
   };
+
   return (
-    <>
-      <div className={`row ${customClass}`}>
-        <h3 className="Thetitle">{title}</h3>
-        <div className="row_posters">
-          {movies?.map((movie, i) => (
+    <div className={`row`}>
+      <h3 className="Thetitle">{title}</h3>
+      <div className="row_posters">
+        {movies?.map((movie, i) => {
+          const imagePath = LargeRow ? movie.poster_path : movie.backdrop_path;
+          return imagePath ? (
             <img
-              onClick={() => handelClick(movie)}
+              onClick={() => handleClick(movie)}
               key={i}
-              src={`${baseUrl}${
-                LargeRow ? movie.poster_path : movie.backdrop_path
-              }`}
-              alt={movie.name}
+              src={`${baseUrl}${imagePath}`}
+              alt={movie.name || "Movie image"}
               className={`row_poster ${LargeRow && "row_posterLarge"}`}
             />
-          ))}
-        </div>
-        <div style={{ padding: 40 }}>
-          {trailerUrl && <YouTube videoId={trailerUrl} opts={options} />}
-        </div>
+          ) : null;
+        })}
       </div>
-    </>
+      <div style={{ padding: 40 }}>
+        {trailerUrl && logicalTrailer === title && (  <YouTube videoId={trailerUrl} opts={options} />)}
+      </div>
+    </div>
   );
 }
 

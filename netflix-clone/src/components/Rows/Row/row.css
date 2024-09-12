@@ -28,12 +28,12 @@
 }
 
 .row_posterLarge:hover {
-  transform: scale(1.09);
+  transform: scale(1.09);/*(width and height) will be increased by 9% of its original size. 109px by 109px*/
 }
 
 .Thetitle {
   font-size: 21px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .row {
