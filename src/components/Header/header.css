@@ -1,0 +1,42 @@
+.header_outlet_container {
+  position: sticky;
+  transition: all 0.5s; /* smoothly animate changes*/
+  top: 0; /*to stick on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  background-color: transparent;
+  height: 10vh; /*view hight"makes more flexable" */
+  color: white;
+  transition-timing-function: ease-in; /* controls how the transition progresses over time*/
+  z-index: 1;
+}
+
+/* .nav-black {
+    background-color: rgb(20, 20, 20);
+} */
+
+.header_container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_left ul {
+  width: 140%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+.header_right ul {
+  width: 150%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  cursor: pointer;
+  /* background-color: lightgreen; */
+}

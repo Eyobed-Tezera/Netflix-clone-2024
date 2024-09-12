@@ -1,0 +1,76 @@
+/* Base styles for the row posters */
+.row_poster {
+  width: 100%;
+  object-fit: contain;
+  max-height: 100px;
+  transition: transform 450ms;
+  margin-right: 10px;
+}
+
+.row_posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row_poster:hover {
+  transform: scale(1.08);
+}
+
+.row_posterLarge {
+  max-height: 250px;
+}
+
+.row_posterLarge:hover {
+  transform: scale(1.09);/*(width and height) will be increased by 9% of its original size. 109px by 109px*/
+}
+
+.Thetitle {
+  font-size: 21px;
+  margin-bottom: 11px;
+}
+
+.row {
+  margin-left: 20px;
+  color: white;
+  padding: 20px 0;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .row_posterLarge {
+    max-height: 150px; 
+  }
+
+  .row_poster {
+    max-height: 80px;
+  }
+
+  .Thetitle {
+    font-size: 18px;
+  }
+
+  .row {
+    margin-left: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .row_posterLarge {
+    max-height: 120px;
+  }
+
+  .row_poster {
+    max-height: 70px;
+  }
+
+  .Thetitle {
+    font-size: 16px;
+  }
+}
