@@ -30,6 +30,7 @@ function Row({ title, fetchUrl, LargeRow, logicalTrailer, setLogicalTrailer }) {
         (url) => {
           const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(urlParams.get("v"));
+          console.log(urlParams)
           setLogicalTrailer(title);
         }
       );

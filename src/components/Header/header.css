@@ -40,3 +40,8 @@
   cursor: pointer;
   /* background-color: lightgreen; */
 }
+@media screen and (max-width: 1010px) {
+  .header_left ul li:not(:first-child) {
+    display: none;
+  }
+}
